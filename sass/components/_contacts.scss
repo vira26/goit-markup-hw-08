@@ -1,0 +1,40 @@
+@media (min-width: 1200px) {
+  .navigation__list-contact + .navigation__list-contact {
+    margin-left: 50px;
+  }
+}
+.navigation__link {
+  display: flex;
+  align-items: center;
+
+  color: $primary-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  transition: color 250ms $time-function;
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+  @media (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 1199px) {
+  .navigation__list-contact:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.navigation__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}

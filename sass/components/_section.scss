@@ -1,0 +1,35 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  @media (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &-features {
+    @media (min-width: 1200px) {
+      padding-top: 94px;
+    }
+    @media (max-width: 1199px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  &-command {
+    background-color: $third-bgc-color;
+    @media (max-width: 1199px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .section.work {
+    display: none;
+  }
+}

@@ -1,0 +1,50 @@
+.work {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+  }
+  &__list {
+    @include list;
+  }
+  &__images-list {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $primary-wight-color;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__box {
+    position: relative;
+  }
+  &__images {
+    display: block;
+  }
+  &__text-img {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-wight-color;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    margin: 0;
+  }
+}

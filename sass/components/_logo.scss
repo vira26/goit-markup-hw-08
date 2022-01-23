@@ -1,0 +1,51 @@
+%logo {
+  display: flex;
+
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+%logo-blue {
+  display: block;
+
+  color: $accent-text-color;
+}
+.navigation__link-logo {
+  @extend %logo;
+  align-items: center;
+
+  color: #000000;
+
+  @media (min-width: 1200px) {
+    margin-right: 93px;
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    margin-right: 0;
+  }
+}
+.navigation__logo--blue {
+  @extend %logo-blue;
+}
+.basement__link {
+  @extend %logo;
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $primary-wight-color;
+
+  align-items: center;
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: calc(28 / 24);
+  }
+}
+.basement__logo {
+  @extend %logo-blue;
+}

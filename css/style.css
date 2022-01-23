@@ -1,0 +1,230 @@
+/* Цвет акцента #2196F3
+Цвет заголовка #212121 
+Цвет основного текста #757575
+Белый цвет #FFFFFF
+*/
+
+:root {
+  --accent-text-color: #2196f3;
+  --title-text-color: #212121;
+  --primary-text-color: #757575;
+  --primary-wight-color: #ffffff;
+  --second-bgc-color: #2f303a;
+  --third-bgc-color: #f5f4fa;
+  --icon-color: #afb1b8;
+  --form-label-color: rgba(117, 117, 117, 0.5);
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Portfolio */
+.portfolio {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border: 1px solid tomato; */
+}
+.portfolio__title {
+  display: none;
+}
+@media (max-width: 767px) {
+  .block-button {
+    margin-bottom: 40px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .block-button {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .block-button {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio__list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+.portfolio__filter {
+  margin-right: 8px;
+}
+@media (max-width: 767px) {
+  .portfolio__filter {
+    margin-bottom: 15px;
+  }
+}
+.portfolio__filter:last-child {
+  margin-right: 0;
+}
+.portfolio__btn {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+
+  background-color: var(--third-bgc-color);
+  color: var(--title-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  transition: background-color 250ms var(--time-function),
+    color 250ms var(--time-function);
+}
+
+.portfolio__btn:hover,
+.portfolio__btn:focus {
+  background-color: var(--accent-text-color);
+  color: var(--primary-wight-color);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 767px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    max-width: 450px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: -15px;
+  }
+}
+@media (min-width: 1200px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .project > .project__list {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .project__list {
+    display: flex;
+    justify-content: center;
+  }
+  .project__list:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .project__list {
+    margin: 15px;
+  }
+}
+.project__link {
+  display: block;
+
+  transition: box-shadow 250ms var(--time-function);
+}
+.project__link:focus,
+.project__link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project__card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.project__picture {
+  display: block;
+  max-width: 100%;
+}
+.project__text {
+  padding: 63px 24px;
+  margin: 0;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.5;
+
+  background: rgba(33, 150, 243, 0.9);
+  color: var(--primary-wight-color);
+
+  position: absolute;
+  top: 295px;
+  transition: top 250ms var(--time-function);
+}
+.project__link:focus .project__text,
+.project__link:hover .project__text {
+  top: 0;
+}
+
+.project__card-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.project__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  text-transform: none;
+
+  color: var(--title-text-color);
+}
+.project__text-category {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.87;
+}
+a p {
+  color: var(--primary-text-color);
+}
